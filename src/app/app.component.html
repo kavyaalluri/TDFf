@@ -15,9 +15,7 @@
         [(ngModel)]="userModel.userName"
         class="form-control"
       />
-      <small [class.d-none]="name.valid && name.untouched"
-        >Name is required</small
-      >
+      <small [ngClass]="name.valid && name.untouched">Name is required</small>
     </div>
     <div class="form-group" style="margin:10px; margin-left:0px;">
       <label>password: </label>
@@ -30,7 +28,7 @@
         [(ngModel)]="userModel.pwd"
         class="form-control"
       />
-      <small [class.d-none]="name.valid && name.untouched"
+      <small [class.d-none]="pwd.valid || pwd.untouched"
         >Password is required</small
       >
     </div>
